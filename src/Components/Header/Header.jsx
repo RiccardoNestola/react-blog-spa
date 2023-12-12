@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 const Header = ({ onOpenModal }) => {
     return (
@@ -12,9 +13,9 @@ const Header = ({ onOpenModal }) => {
                         <a href="/" className="ml-3 text-xl">Il Mio Blog</a>
                     </div>
                     <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
-
-                        <a href='#' className="mr-5 hover:text-gray-900">Chi Sono</a>
-                        <a href='#' className="mr-5 hover:text-gray-900">Contatti</a>
+                        <NavLink to='/' className="mr-5 hover:text-gray-900">Home</NavLink>
+                        <NavLink to='/chi-sono' className="mr-5 hover:text-gray-900">Chi Sono</NavLink>
+                        <NavLink to='/contatti' className="mr-5 hover:text-gray-900">Contatti</NavLink>
                     </nav>
 
                     <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" onClick={onOpenModal}>Crea Post
